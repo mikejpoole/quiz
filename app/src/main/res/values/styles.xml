@@ -1,0 +1,82 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <style name="questionNumber">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_margin">4dp</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textSize">48sp</item>
+        <item name="android:color">@color/white</item>
+        <item name="android:background">@drawable/rounded_corner</item>
+    </style>
+
+    <style name="question">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_margin">4dp</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:color">@color/white</item>
+        <item name="android:background">@drawable/rounded_corner</item>
+    </style>
+
+    <style name="scoreSoFar">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_margin">4dp</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:color">@color/white</item>
+        <item name="android:background">@drawable/rounded_corner</item>
+    </style>
+
+    <style name="radioButton">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">4dp</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:background">@drawable/rounded_corner</item>
+    </style>
+
+    <style name="checkbox">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:background">@drawable/rounded_corner</item>
+        <item name="android:layout_margin">4dp</item>
+    </style>
+
+    <style name="textfield">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">48dp</item>
+        <item name="android:layout_margin">4dp</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:background">@drawable/edit_text_background</item>
+    </style>
+
+    <style name="nextButton">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">#fff</item>
+        <item name="android:paddingRight">24dp</item>
+        <item name="android:layout_marginTop">16dp</item>
+        <item name="android:background">@drawable/nextbutton</item>
+        <item name="android:drawableRight">@drawable/ic_arrows</item>
+    </style>
+
+</resources>
