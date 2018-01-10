@@ -37,10 +37,19 @@
         />
 
 
+
+
+    <RelativeLayout
+        android:id="@+id/questionWrapper"
+        style="@style/questionWrapper"
+        >
+
+
     <TextView
         style="@style/question"
         android:id="@+id/question"
         android:text="@string/loading"
+        android:layout_weight="1"
         />
 
 
@@ -51,6 +60,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
+        android:layout_below="@id/question"
         >
 
         <RadioButton
@@ -92,6 +102,7 @@
         android:id="@+id/checkbox1"
         android:text="@string/loading"
         android:onClick="checkbox"
+        android:layout_below="@id/question"
         />
 
     <CheckBox
@@ -99,6 +110,7 @@
         android:id="@+id/checkbox2"
         android:text="@string/loading"
         android:onClick="checkbox"
+        android:layout_below="@id/checkbox1"
         />
 
     <CheckBox
@@ -106,6 +118,7 @@
         android:id="@+id/checkbox3"
         android:text="@string/loading"
         android:onClick="checkbox"
+        android:layout_below="@id/checkbox2"
         />
 
     <CheckBox
@@ -113,6 +126,7 @@
         android:id="@+id/checkbox4"
         android:text="@string/loading"
         android:onClick="checkbox"
+        android:layout_below="@id/checkbox3"
         />
 
 
@@ -122,11 +136,12 @@
         style="@style/textfield"
         android:id="@+id/textfield"
         android:text="@string/loading"
+        android:layout_below="@id/question"
         android:inputType="text"
         android:imeOptions="actionDone"
         />
 
-
+    </RelativeLayout>
 
 
     <!-- SUBMIT BUTTON -->
