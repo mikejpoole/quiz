@@ -38,17 +38,19 @@ public class MainActivity extends AppCompatActivity {
     // DEFINE TEXTVIEWS
     private TextView questionNumber;
     private TextView question;
+    private View questionWrapper;
     private TextView scoreSoFar;
 
 
-    // DEFINE RADIOBUTTONS
+    // DEFINE RADIOGROUP AND RADIOBUTTONS
+    private RadioGroup radioGroup;
     private RadioButton radioButton1;
     private RadioButton radioButton2;
     private RadioButton radioButton3;
     private RadioButton radioButton4;
 
 
-    // DEFINE RADIOBUTTONS
+    // DEFINE CHECKBOXES
     private CheckBox checkbox1;
     private CheckBox checkbox2;
     private CheckBox checkbox3;
@@ -79,10 +81,13 @@ public class MainActivity extends AppCompatActivity {
 
         questionNumber = findViewById(R.id.questionNumber);
         question = findViewById(R.id.question);
+        questionWrapper = findViewById(R.id.questionWrapper);
+
         scoreSoFar = findViewById(R.id.scoreSoFar);
 
         scoreSoFar.setVisibility(View.GONE);
 
+        radioGroup =  findViewById(R.id.radioGroup);
         radioButton1 = findViewById(R.id.radioButton1);
         radioButton2 = findViewById(R.id.radioButton2);
         radioButton3 = findViewById(R.id.radioButton3);
@@ -259,11 +264,6 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-
-
-
-
-
     public void nextButton(View view){
         checkAnswer();
         updateScore();
@@ -381,10 +381,8 @@ public class MainActivity extends AppCompatActivity {
 
         // SET RADIO BUTTONS
         if (myArray[iQuestion][7] == "radio") {
-            radioButton1.setChecked(false);
-            radioButton2.setChecked(false);
-            radioButton3.setChecked(false);
-            radioButton4.setChecked(false);
+            radioGroup.clearCheck();                        // CAUSES A RIPPLE
+
             radioButton1.setVisibility(View.VISIBLE);
             radioButton2.setVisibility(View.VISIBLE);
             radioButton3.setVisibility(View.VISIBLE);
@@ -442,6 +440,7 @@ public class MainActivity extends AppCompatActivity {
     public void finishQuiz(){
         question.setVisibility(View.GONE);
         questionImage.setVisibility(View.GONE);
+        questionWrapper.setVisibility(View.GONE);
 
         checkbox1.setVisibility(View.GONE);
         checkbox2.setVisibility(View.GONE);
@@ -451,9 +450,9 @@ public class MainActivity extends AppCompatActivity {
         nextButton.setVisibility(View.GONE);
         scoreSoFar.setVisibility(View.GONE);
 
-        questionNumber.setPadding(0,200,0,0);
+        questionNumber.setPadding(0,100,0,100);
         questionNumber.setTextSize(64);
-        questionNumber.setText("You have Finished.\n\nYou scored\n" + iScore + " out of 10\n\n");
+        questionNumber.setText("You have Finished.\n\nYou scored\n" + iScore + " out of 10");
 
 //        Toast.makeText(getApplicationContext(), "Congratulations you scored " + iScore + " out of 10",Toast.LENGTH_SHORT).show();
 
